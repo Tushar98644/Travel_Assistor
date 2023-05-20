@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
+import cors from 'cors';
 import Pin_route from '../routes/Pin_routes';
 import User_route from '../routes/User_routes';
 
@@ -10,6 +11,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
+app.use(cors())
 
 app.use('/api/pin',Pin_route);
 app.use('/api/user',User_route);
