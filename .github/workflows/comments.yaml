@@ -1,9 +1,9 @@
 name: Comment on new issues
 
 on:
-  push:
-    branches:
-      - main
+  issues:
+    types: [opened]
+  
   
 jobs:
   comment-with-action:
@@ -17,6 +17,7 @@ jobs:
       - name: "comment with action"
         uses: peter-evans/create-or-update-comment@v1
         with:
+          issue-number: ${{ github.event.issue.number }}
           body: |
             This is a multiline test comment 
             - with GitHub **markdown** :sparkles:
