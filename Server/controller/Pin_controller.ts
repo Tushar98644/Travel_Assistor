@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Pin from "../mdoels/Pin";
+import Pin from "../models/Pin";
 
 export const CreatePin = async (req: any, res: any) => {
     const newPin = new Pin(req.body);

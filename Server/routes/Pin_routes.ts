@@ -10,3 +10,5 @@ router.post('/', CreatePin);
 // get all pins
 
 router.get('/', GetPins);
+
+export default router;
