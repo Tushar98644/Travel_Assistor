@@ -1,8 +1,10 @@
 name: Comment on new issues
 
 on:
-  issues:
-    types: [opened]
+  push:
+    branches:
+      - main
+  
 
 jobs:
   comment-with-action:
